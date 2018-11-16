@@ -1,0 +1,120 @@
+{
+    "mappings": {
+      "_doc": {
+        "properties": {
+          "codigo": {
+            "type": "keyword"
+          },
+          "competencias": {
+            "properties": {
+              "codigo": {
+                "type": "keyword"
+              },
+              "competencia": {
+                "type": "text",
+                "analyzer" : "galician"
+              }
+            }
+          },
+          "contenidos": {
+            "properties": {
+              "subtemas": {
+                "properties": {
+                  "subtema": {
+                    "type": "text",
+                    "analyzer" : "galician"
+                  }
+                }
+              },
+              "temas": {
+                "properties": {
+                  "tema": {
+                    "type": "text",
+                    "analyzer" : "galician"
+                  }
+                }
+              }
+            }
+          },
+          "coordinadores": {
+            "properties": {
+              "email": {
+                "type": "keyword"
+              },
+              "nombre": {
+                "type": "text",
+                "analyzer" : "galician"
+              }
+            }
+          },
+          "creditos": {
+            "type": "float"
+          },
+          "cuatrimestre": {
+            "type": "text",
+            "analyzer" : "galician"
+          },
+          "curso": {
+            "type": "text",
+            "analyzer" : "galician",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "departamento": {
+            "type": "text",
+            "analyzer" : "galician"
+          },
+          "descripcion": {
+            "type": "text",
+            "analyzer" : "galician"
+          },
+          "nombre_asignatura": {
+            "type": "text",
+            "analyzer" : "galician"
+          },
+          "nombre_centro": {
+            "type": "text",
+            "analyzer" : "galician",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "nombre_titulacion": {
+            "type": "text",
+            "analyzer" : "galician",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "profesores": {
+            "properties": {
+              "email": {
+                "type": "keyword"
+              },
+              "nombre": {
+                "type": "text",
+                "analyzer" : "galician"
+              }
+            }
+          },
+          "tipo": {
+            "type": "text",
+            "analyzer" : "galician"
+          },
+          "url": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+}
